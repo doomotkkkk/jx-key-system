@@ -7,10 +7,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const SUPABASE_URL = https://yfmggjpbrmibhfveqgjz.supabase.co;
-const SUPABASE_SERVICE_KEY = sb_publishable_xfyccL0la_rkeen-9lmqSg_O0Z2LE_2;
+const SUPABASE_URL = "https://yfmggjpbrmibhfveqgjz.supabase.co";
+const SUPABASE_KEY = "sb_publishable_xfyccL0la_rkeen-9lmqSg_O0Z2LE_2";
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 app.get("/", (req, res) => {
     res.json({
@@ -89,6 +89,8 @@ app.post("/verify", async (req, res) => {
         });
 
     } catch (err) {
+        console.error(err);
+
         return res.status(500).json({
             success: false,
             message: "Server error"

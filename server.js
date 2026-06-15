@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const SUPABASE_URL = https://yfmggjpbrmibhfveqgjz.supabase.co/rest/v1/;
+const SUPABASE_URL = https://yfmggjpbrmibhfveqgjz.supabase.co;
 const SUPABASE_SERVICE_KEY = sb_publishable_xfyccL0la_rkeen-9lmqSg_O0Z2LE_2;
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
